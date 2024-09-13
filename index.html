@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan's First All AI WebPage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo">MadebyAi</div>
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Three dots menu icon -->
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#readme">Read Me</a></li>
+                <li><a href="#action" class="action-btn">Take Action</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h3>Sustainability</h3>
+            <h1>STARTS WITH YOU</h1>
+            <a href="#learnmore" class="learn-more-btn">Learn More</a>
+        </div>
+    </header>
+
+    <section class="info-section">
+        <h2>We conserve land through outreach, restoration, and research.</h2>
+        <p>
+            Some of the Earth's greatest landscapes are threatened by increased road
+            construction, oil and gas exploration, and mining. We aim to protect these areas
+            from inappropriate development, but we cannot achieve our goals alone. Find out how you can help.
+        </p>
+    </section>
+
+    <section class="details-section">
+        <div class="details-item">
+            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*xo2uacTIAN0LYYEefrHxYA.jpeg" alt="About Image">
+            <div class="details-text">
+                <h3>ABOUT</h3>
+                <p>Find out about our organization, mission, our methods, and the results of our decades of advocacy.</p>
+            </div>
+        </div>
+        <div class="details-item">
+            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*5M-xxcFJAt8ZFzpzxpQA_w.jpeg" alt="Take Action Image">
+            <div class="details-text">
+                <h3>TAKE ACTION</h3>
+                <p>Ready to take the next step? You can become a contributor to our cause, or participate yourself.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>@Aryan, Made with just Ai</p>
+    </section>
+
+    <script>
+        // JavaScript to toggle menu on mobile
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // JavaScript to hide/show navbar on scroll
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                navbar.style.top = "-60px"; // Adjust this value based on navbar height
+            } else {
+                // Scrolling up
+                navbar.style.top = "0";
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+        });
+    </script>
+</body>
+</html>
